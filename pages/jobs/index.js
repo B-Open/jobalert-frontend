@@ -1,14 +1,14 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
-import api from "../components/Api";
-import Page from "../components/Page";
-import JobsList from "../components/List/Jobs";
-import SearchForm from "../components/Search/Form";
+import api from "../../components/Api";
+import Page from "../../components/Page";
+import JobsList from "../../components/List/Jobs";
+import SearchForm from "../../components/Search/Form";
 
 const Jobs = ({ data, searchTerm, error }) => {
   const router = useRouter();
   const handleSubmit = (values) => {
-    router.push(`/jobs?search=${values.search}`);
+    return router.push(`/jobs?search=${values.search}`);
   };
 
   return (
@@ -21,13 +21,13 @@ const Jobs = ({ data, searchTerm, error }) => {
       <Page>
         <section className="max-w-7xl mx-auto py-16">
           <div className="bg-white min-h-full px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
-            <div className="max-w-max mx-auto">
+            <div className="max-w-max md:mx-auto">
               <main className="sm:flex">
                 {!!data.length && (
-                  <div className="text-right">
+                  <div className="text-left md:text-right">
                     <p className="text-xl">Searching for..</p>
                     <p className="text-4xl font-extrabold text-primary-600 sm:text-5xl">
-                      {searchTerm}
+                      {String(searchTerm).toUpperCase()}
                     </p>
                   </div>
                 )}

@@ -31,7 +31,7 @@ export const Input = forwardRef(
           <input
             type="text"
             className={cx(
-              "appearance-none min-w-0 w-full bg-white border rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white focus:border-white focus:placeholder-gray-400",
+              "appearance-none min-w-0 w-full bg-white border rounded-md py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-200 focus:ring-white focus:border-gray focus:placeholder-gray-100",
               meta &&
                 meta.error &&
                 meta.touched &&
@@ -39,7 +39,7 @@ export const Input = forwardRef(
               meta &&
                 !meta.error &&
                 meta.touched &&
-                "border-green-300 text-green-900 placeholder-green-300 focus:ring-green-500 focus:border-green-500 focus:outline-none"
+                "border-green-300 text-green-900 placeholder-gray-300 focus:ring-gray-400 focus:border-gray-300 focus:outline-none"
             )}
             autoComplete={autoComplete}
             {...field}

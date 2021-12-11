@@ -18,11 +18,11 @@ const SearchForm = ({ onSubmit }) => {
           .required("You must include a search term."),
       })}
     >
-      {() => (
+      {({ isSubmitting }) => (
         <Form className="mt-4 sm:flex sm:max-w-md">
           <Input hideLabel label="keyword" name="search" autoComplete="off" />
           <div className="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-            <Button buttonType="primary" type="submit">
+            <Button buttonType="primary" type="submit" isLoading={isSubmitting}>
               Search
             </Button>
           </div>
