@@ -39,7 +39,7 @@ const SubMenu = ({ title = "Support", subMenu = [] }) => {
         aria-expanded={show ? "true" : "false"}
         onClick={() => setShow((e) => !e)}
       >
-        <span>{title} </span>
+        <span>{title}</span>
         <svg
           className="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500"
           xmlns="http://www.w3.org/2000/svg"
@@ -107,10 +107,12 @@ const Header = () => {
     <div className="relative bg-white">
       <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div>
-          <a href="#" className="flex">
-            <span className="sr-only">B-Open</span>
-            <SmallLogo />
-          </a>
+          <Link href="/" className="flex">
+            <span>
+              <span className="sr-only">B-Open</span>
+              <SmallLogo />
+            </span>
+          </Link>
         </div>
         <div className="-mr-2 -my-2 md:hidden">
           <button

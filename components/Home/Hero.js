@@ -1,7 +1,13 @@
+import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
 import SearchForm from "../Search/Form";
 
 const HomeHero = () => {
+  const router = useRouter();
+  const handleSubmit = (values) => {
+    router.push(`/jobs?search=${values.search}`);
+  };
+
   return (
     <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
       <div className="flex flex-col md:flex-row">
@@ -22,7 +28,7 @@ const HomeHero = () => {
             <p className="text-base font-medium text-gray-900">
               Start by searching for a keyword
             </p>
-            <SearchForm />
+            <SearchForm onSubmit={handleSubmit} />
           </div>
         </div>
         <div className="relative md:w-1/2 w-100 h-64 md:h-auto order-first md:order-last mb-4 md:mb-0">

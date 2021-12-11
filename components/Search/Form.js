@@ -1,24 +1,21 @@
 import { Formik, Form } from "formik";
+import { useRouter } from "next/dist/client/router";
 import * as Yup from "yup";
 
 import Button from "../Button";
 import { Input } from "../Inputs/Input";
 
-const SearchForm = () => {
-  const handleSubmit = (values) => {
-    console.log("submitting", values);
-  };
-
+const SearchForm = ({ onSubmit }) => {
   return (
     <Formik
       initialValues={{
-        email: "",
+        search: "",
       }}
-      onSubmit={handleSubmit}
+      onSubmit={onSubmit}
       validationSchema={Yup.object().shape({
         search: Yup.string()
           .min(3, "Search must contain at least 3 characters.")
-          .required('You must include a search term.'),
+          .required("You must include a search term."),
       })}
     >
       {() => (
