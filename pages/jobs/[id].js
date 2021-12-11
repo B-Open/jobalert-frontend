@@ -25,14 +25,14 @@ const JobsID = (props) => {
             alt="two people talking"
             className="opacity-75"
           />
-          <div className="absolute bottom-3 w-full justify-center">
+          <div className="absolute bottom-3 w-full justify-center px-3 xl:px-0">
             <Breadcrumb
-              className="bg-sky-500/75 mx-auto max-w-7xl"
+              className="bg-white mx-auto max-w-7xl"
               links={[{ title: "Search Jobs", href: "/jobs" }]}
             />
           </div>
         </div>
-        <section className="max-w-7xl mx-auto pt-8 pb-16">
+        <section className="max-w-7xl mx-auto pt-8 pb-16 px-3 xl:px-0">
           <div className="mt-8 p-4 rounded-2xl shadow-xl">
             <p className="text-4xl font-extrabold text-primary-600 sm:text-5xl">
               {String(title).toUpperCase()}
