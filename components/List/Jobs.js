@@ -59,7 +59,7 @@ const JobList = (props) => {
                 Imported on
                 <time
                   className="ml-1"
-                  datetime={importedOn.format("YYYY-MM-DD")}
+                  dateTime={importedOn.format("YYYY-MM-DD")}
                 >
                   {importedOn.format("Do MMM yyyy")}
                 </time>
